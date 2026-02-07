@@ -4,11 +4,11 @@ import prettier from "eslint-config-prettier";
 import svelte from "eslint-plugin-svelte";
 import { defineConfig } from "eslint/config";
 import globals from "globals";
-import { fileURLToPath } from "node:url";
+import path from "node:path";
 import ts from "typescript-eslint";
 import svelteConfig from "./svelte.config.js";
 
-const gitignorePath = fileURLToPath(new URL("./.gitignore", import.meta.url));
+const gitignorePath = path.resolve(import.meta.dirname, ".gitignore");
 
 export default defineConfig(
   includeIgnoreFile(gitignorePath),
@@ -27,8 +27,41 @@ export default defineConfig(
       "@typescript-eslint/no-unused-vars": [
         "error",
         {
+          args: "all",
           argsIgnorePattern: "^_",
+          caughtErrors: "all",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
           varsIgnorePattern: "^_",
+          ignoreRestSiblings: true,
+        },
+      ],
+      "no-console": [
+        "error",
+        {
+          allow: [
+            "info",
+            "warn",
+            "dir",
+            "timeLog",
+            "assert",
+            "clear",
+            "count",
+            "countReset",
+            "group",
+            "groupEnd",
+            "table",
+            "dirxml",
+            "error",
+            "groupCollapsed",
+            "Console",
+            "profile",
+            "profileEnd",
+            "timeStamp",
+            "context",
+            "time",
+            "timeEnd",
+          ],
         },
       ],
       "@typescript-eslint/no-unused-expressions": "off",
@@ -44,6 +77,10 @@ export default defineConfig(
         parser: ts.parser,
         svelteConfig,
       },
+    },
+    rules: {
+      "svelte/no-at-html-tags": "off",
+      "svelte/no-useless-mustaches": "off",
     },
   },
   {

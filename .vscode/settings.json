@@ -1,5 +1,7 @@
 {
-  "editor.defaultFormatter": "prettier.prettier-vscode",
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "always",
@@ -13,6 +15,7 @@
   "svelte.enable-ts-plugin": true,
   "svelte.plugin.svelte.defaultScriptLanguage": "ts",
   "tailwindCSS.classAttributes": ["class", "class:*", "class:name", "className"],
+  "tailwindCSS.classFunctions": ["clsx", "cn"],
   "tailwindCSS.emmetCompletions": true,
   "tailwindCSS.includeLanguages": {
     "html": "html",
@@ -23,5 +26,6 @@
   },
   "javascript.updateImportsOnFileMove.enabled": "prompt",
   "typescript.updateImportsOnFileMove.enabled": "prompt",
-  "eslint.validate": ["javascript", "typescript", "svelte"]
+  "eslint.validate": ["javascript", "typescript", "svelte"],
+  "prettier.documentSelectors": ["**/*.svelte"]
 }

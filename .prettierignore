@@ -12,7 +12,6 @@ package-lock.json
 yarn.lock
 **/.changeset/
 .prettierrc
-.vercel
 .contentlayer
 **/dist
 **/.github

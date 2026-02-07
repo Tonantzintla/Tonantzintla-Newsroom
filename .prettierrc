@@ -32,5 +32,9 @@
       }
     }
   ],
-  "tailwindFunctions": ["clsx", "cn", "tv"]
+  "svelteStrictMode": true,
+  "tailwindFunctions": ["clsx", "cn", "tv"],
+  "tailwindStylesheet": "./src/app.css",
+  "tailwindAttributes": ["class", "class:*", "class:name"],
+  "tailwindPreserveWhitespace": false
 }
