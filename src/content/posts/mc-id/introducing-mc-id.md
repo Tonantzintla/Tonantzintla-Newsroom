@@ -20,14 +20,14 @@ applications you use every day.
 
 ## The Problem with Minecraft Authentication
 
-For years, players and developers have struggled with fragmented ways to verify Minecraft account
+For years, players and developers have struggled with fragmented ways to verify a Minecraft account
 ownership. Most systems require users to join a specific "verification server" every single time
 they want to log into a new website or link a service.
 
 This process is slow, requires you to have the game open, and often lacks the security standards
 expected of modern applications.
 
-The official way of authenticating Minecraft accounts has been through Microsoft's OAuth, however,
+The official way of authenticating Minecraft accounts has been through Microsoft's OAuth. However,
 this has been the source of many hostile takeovers and account breaches, as it exposes the full Xbox
 login credentials to third-party applications, which can be easily used to fully take over the
 account.
