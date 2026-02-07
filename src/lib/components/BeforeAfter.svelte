@@ -21,17 +21,17 @@
 
 <Tabs.Root
   bind:value
-  class="border-border bg-popover flex h-120 shrink flex-col justify-between rounded-lg border p-4">
-  <Tabs.List class="bg-secondary mx-auto">
+  class="flex h-120 shrink flex-col justify-between rounded-lg border border-border bg-popover p-4">
+  <Tabs.List class="mx-auto bg-secondary">
     {#each tabs as tab, index (index)}
       {@const isActive = value === tab.value}
       <Tabs.Trigger
         value={tab.value}
-        class="text-secondary-foreground data-[state=active]:text-primary-foreground relative transition-colors duration-300 data-[state=active]:bg-transparent"
+        class="relative text-secondary-foreground transition-colors duration-300 data-[state=active]:bg-transparent data-[state=active]:text-primary-foreground"
         data-sveltekit-noscroll>
         {#if isActive}
           <div
-            class="bg-primary absolute inset-0 rounded-sm"
+            class="absolute inset-0 rounded-sm bg-primary"
             in:send={{ key: "active-tab" }}
             out:receive={{ key: "active-tab" }}>
           </div>

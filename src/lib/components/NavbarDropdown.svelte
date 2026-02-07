@@ -13,7 +13,7 @@
 </script>
 
 <DropdownMenu.Root bind:open={menuDropdownOpen}>
-  <DropdownMenu.Trigger class="hover:bg-popover group flex items-center gap-2 rounded-md px-4 py-2">
+  <DropdownMenu.Trigger class="group flex items-center gap-2 rounded-md px-4 py-2 hover:bg-popover">
     <img
       class="pointer-events-none block h-8 w-auto transition-transform duration-300 ease-in-out group-data-[state=open]:rotate-45 max-md:group-data-[state=open]:-rotate-45"
       src="/assets/favicons/favicon.svg"
@@ -21,9 +21,9 @@
     <h1>Newsroom</h1>
     <ChevronDown class="h-4 w-4" />
   </DropdownMenu.Trigger>
-  <DropdownMenu.Content class="border-border bg-popover w-44">
+  <DropdownMenu.Content class="w-44 border-border bg-popover">
     <DropdownMenu.Group>
-      <DropdownMenu.Item class="data-highlighted:bg-background gap-1.5 hover:cursor-pointer">
+      <DropdownMenu.Item class="gap-1.5 hover:cursor-pointer data-highlighted:bg-background">
         {#snippet child({ props })}
           <a href={resolve("/")} {...props}>
             <House class="size-4" />
@@ -32,14 +32,14 @@
         {/snippet}
       </DropdownMenu.Item>
       <DropdownMenu.Separator class="bg-border" />
-      <DropdownMenu.Item class="data-highlighted:bg-background gap-1.5 hover:cursor-pointer">
+      <DropdownMenu.Item class="gap-1.5 hover:cursor-pointer data-highlighted:bg-background">
         {#snippet child({ props })}
           <a href="https://minionah.com" {...props}>
             <Pickaxe class="size-4" />MinionAH
           </a>
         {/snippet}
       </DropdownMenu.Item>
-      <DropdownMenu.Item class="data-highlighted:bg-background gap-1.5 hover:cursor-pointer">
+      <DropdownMenu.Item class="gap-1.5 hover:cursor-pointer data-highlighted:bg-background">
         {#snippet child({ props })}
           <a href="https://discord.tonantzintla.org" target="_blank" {...props}>
             <Users class="size-4" />Community
@@ -47,14 +47,14 @@
         {/snippet}
       </DropdownMenu.Item>
       <DropdownMenu.Separator class="bg-border" />
-      <DropdownMenu.Item class="data-highlighted:bg-background gap-1.5 hover:cursor-pointer">
+      <DropdownMenu.Item class="gap-1.5 hover:cursor-pointer data-highlighted:bg-background">
         {#snippet child({ props })}
           <a href={resolve("/[slug]", { slug: "minionah" })} {...props}>
             <CircleHelp class="size-4" />About
           </a>
         {/snippet}
       </DropdownMenu.Item>
-      <DropdownMenu.Item class="data-highlighted:bg-background gap-1.5 hover:cursor-pointer">
+      <DropdownMenu.Item class="gap-1.5 hover:cursor-pointer data-highlighted:bg-background">
         {#snippet child({ props })}
           <a href="https://github.com/DarthGigi/MinionAH" target="_blank" {...props}>
             <Code class="size-4" /> GitHub
@@ -62,14 +62,14 @@
         {/snippet}
       </DropdownMenu.Item>
       <DropdownMenu.Separator class="bg-border" />
-      <DropdownMenu.Item class="data-highlighted:bg-background gap-1.5 hover:cursor-pointer">
+      <DropdownMenu.Item class="gap-1.5 hover:cursor-pointer data-highlighted:bg-background">
         {#snippet child({ props })}
           <a href={resolve("/[slug]", { slug: "privacy-policy" })} {...props}>
             <Scale class="size-4" />Privacy Policy
           </a>
         {/snippet}
       </DropdownMenu.Item>
-      <DropdownMenu.Item class="data-highlighted:bg-background gap-1.5 hover:cursor-pointer">
+      <DropdownMenu.Item class="gap-1.5 hover:cursor-pointer data-highlighted:bg-background">
         {#snippet child({ props })}
           <a href={resolve("/[slug]", { slug: "terms-of-service" })} {...props}>
             <Scale class="size-4" />Terms of Service

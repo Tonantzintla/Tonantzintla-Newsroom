@@ -39,7 +39,7 @@
   <Carousel.Content class="h-120 p-0">
     {#each items as item, index (index)}
       <Carousel.Item>
-        <Card.Root class="border-border bg-popover flex h-full items-center justify-center p-0">
+        <Card.Root class="flex h-full items-center justify-center border-border bg-popover p-0">
           <Card.Content class="flex items-center justify-center rounded-lg p-4">
             {#if getMediaType(item) === "image"}
               <img src={item} alt="media" class="pointer-events-none mx-auto max-h-96" />

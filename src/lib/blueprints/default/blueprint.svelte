@@ -55,14 +55,14 @@
 
 <main class="relative overflow-hidden py-8">
   <article
-    class="prose prose-lg prose-neutral prose-invert! prose-headings:scroll-m-20 prose-a:text-white prose-img:pointer-events-none prose-img:w-full prose-img:rounded-lg prose-video:w-full prose-video:rounded-lg relative mx-auto mt-6 max-w-4xl px-4 py-4 sm:px-4 lg:px-6">
+    class="relative mx-auto prose prose-lg mt-6 max-w-4xl px-4 py-4 prose-neutral prose-invert! sm:px-4 lg:px-6 prose-headings:scroll-m-20 prose-a:text-white prose-img:pointer-events-none prose-img:w-full prose-img:rounded-lg prose-video:w-full prose-video:rounded-lg">
     <div class="mx-auto mt-0 mb-5 max-w-2xl">
       <div class="mx-auto">
         <div class="relative z-50 text-xs font-bold text-neutral-300">
           {#if project}
             <div class="relative z-50 flex flex-wrap items-center gap-2">
               <span
-                class="bg-primary text-primary-foreground rounded-full px-2.5 py-0.5 text-xs font-semibold">
+                class="rounded-full bg-primary px-2.5 py-0.5 text-xs font-semibold text-primary-foreground">
                 {project}
               </span>
             </div>
@@ -93,7 +93,7 @@
     {#if heroImage}
       <img src={heroImage} alt="heroImage" class="mx-auto" />
     {/if}
-    <div class="prose-lg mx-auto leading-[1.688rem]">
+    <div class="mx-auto prose-lg leading-[1.688rem]">
       {@render children?.()}
     </div>
   </article>
@@ -106,8 +106,8 @@
       <Button
         href={`/${previousPost}`}
         variant="outline"
-        class="group text-muted-foreground flex h-auto flex-row-reverse p-4 text-sm font-medium">
-        <div class="text-muted-foreground ml-2">
+        class="group flex h-auto flex-row-reverse p-4 text-sm font-medium text-muted-foreground">
+        <div class="ml-2 text-muted-foreground">
           Previous
           <p class="text-white">{posts[currentIndex + 1]?.title}</p>
         </div>
@@ -123,9 +123,9 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             class="lucide lucide-arrow-left-circle size-5 transition-all duration-300 group-hover:-translate-x-1">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M16 12H8" />
-            <path d="m12 8-4 4 4 4" />
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M16 12H8"></path>
+            <path d="m12 8-4 4 4 4"></path>
           </svg>
         </div>
       </Button>
@@ -134,8 +134,8 @@
       <Button
         href={`/${nextPost}`}
         variant="outline"
-        class="group text-muted-foreground flex h-auto p-4 text-sm font-medium">
-        <div class="text-muted-foreground mr-2">
+        class="group flex h-auto p-4 text-sm font-medium text-muted-foreground">
+        <div class="mr-2 text-muted-foreground">
           Next
           <p class="text-white">{posts[currentIndex - 1]?.title}</p>
         </div>
@@ -151,9 +151,9 @@
             stroke-linecap="round"
             stroke-linejoin="round"
             class="lucide lucide-arrow-right-circle size-5 transition-all duration-300 group-hover:translate-x-1">
-            <circle cx="12" cy="12" r="10" />
-            <path d="M8 12h8" />
-            <path d="m12 16 4-4-4-4" />
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M8 12h8"></path>
+            <path d="m12 16 4-4-4-4"></path>
           </svg>
         </div>
       </Button>

@@ -95,7 +95,7 @@
   }
 
   html {
-    @apply bg-background text-foreground scroll-smooth pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)];
+    @apply scroll-smooth bg-background pt-[env(safe-area-inset-top)] pb-[env(safe-area-inset-bottom)] text-foreground;
   }
 
   * {

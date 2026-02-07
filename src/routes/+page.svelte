@@ -82,7 +82,7 @@
               {#each PROJECTS as project (project)}
                 <button
                   type="button"
-                  class="hover:bg-accent flex items-center gap-2 rounded-md px-2 py-1.5 text-sm transition-colors"
+                  class="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-accent"
                   onclick={() => toggleProject(project)}>
                   <Checkbox checked={selectedProjects.has(project)} />
                   <span>{project}</span>
@@ -90,11 +90,11 @@
               {/each}
             </div>
             {#if selectedProjects.size > 0}
-              <div class="border-border mt-2 border-t pt-2">
+              <div class="mt-2 border-t border-border pt-2">
                 <Button
                   variant="ghost"
                   size="sm"
-                  class="text-muted-foreground hover:text-foreground h-auto w-full justify-start px-2 py-1 text-xs"
+                  class="h-auto w-full justify-start px-2 py-1 text-xs text-muted-foreground hover:text-foreground"
                   onclick={() => selectedProjects.clear()}>
                   <X class="mr-1 size-3" />
                   Clear selection
@@ -118,7 +118,7 @@
               {#each POST_TYPES as type (type)}
                 <button
                   type="button"
-                  class="hover:bg-accent flex items-center gap-2 rounded-md px-2 py-1.5 text-sm transition-colors"
+                  class="flex items-center gap-2 rounded-md px-2 py-1.5 text-sm transition-colors hover:bg-accent"
                   onclick={() => toggleType(type)}>
                   <Checkbox checked={selectedTypes.has(type)} />
                   <span>{type}</span>
@@ -126,11 +126,11 @@
               {/each}
             </div>
             {#if selectedTypes.size > 0}
-              <div class="border-border mt-2 border-t pt-2">
+              <div class="mt-2 border-t border-border pt-2">
                 <Button
                   variant="ghost"
                   size="sm"
-                  class="text-muted-foreground hover:text-foreground h-auto w-full justify-start px-2 py-1 text-xs"
+                  class="h-auto w-full justify-start px-2 py-1 text-xs text-muted-foreground hover:text-foreground"
                   onclick={() => selectedTypes.clear()}>
                   <X class="mr-1 size-3" />
                   Clear selection
@@ -142,7 +142,7 @@
       </div>
 
       {#if filteredPosts.length === 0}
-        <div class="text-muted-foreground py-12 text-center">
+        <div class="py-12 text-center text-muted-foreground">
           <p class="text-lg">No posts match the selected filters.</p>
         </div>
       {:else}
@@ -151,10 +151,10 @@
           {#each filteredPosts as post, index (post.slug)}
             {#if index === 0}
               <li
-                class="bg-background hover:bg-popover relative m-0 block h-104 w-84 list-none overflow-hidden rounded-xl p-0 transition-colors duration-500 sm:h-114 sm:w-92 md:h-96 md:w-173 xl:h-138 xl:w-245">
+                class="relative m-0 block h-104 w-84 list-none overflow-hidden rounded-xl bg-background p-0 transition-colors duration-500 hover:bg-popover sm:h-114 sm:w-92 md:h-96 md:w-173 xl:h-138 xl:w-245">
                 <a
                   href={resolve("/[slug]", { slug: post.slug })}
-                  class="group bg-background relative block h-full w-full visited:no-underline hover:[text-decoration:none] hover:group-hover:[text-decoration:none]">
+                  class="group relative block h-full w-full bg-background visited:no-underline hover:[text-decoration:none] hover:group-hover:[text-decoration:none]">
                   <img
                     src={post.metadata.heroImage}
                     alt="heroImage"
@@ -169,12 +169,12 @@
                       <div class="mb-3 flex flex-wrap gap-2">
                         {#if post.metadata.project}
                           <span
-                            class="bg-primary/80 text-primary-foreground rounded-full px-3 py-1 text-xs font-semibold backdrop-blur-sm">
+                            class="rounded-full bg-primary/80 px-3 py-1 text-xs font-semibold text-primary-foreground backdrop-blur-sm">
                             {post.metadata.project}
                           </span>
                         {/if}
                         <span
-                          class="bg-secondary/80 text-secondary-foreground rounded-full px-3 py-1 text-xs font-semibold backdrop-blur-sm">
+                          class="rounded-full bg-secondary/80 px-3 py-1 text-xs font-semibold text-secondary-foreground backdrop-blur-sm">
                           {post.metadata.type}
                         </span>
                       </div>
@@ -195,9 +195,9 @@
                 class="md relative m-0 flex w-full shrink list-none p-0 last:even:mx-auto lg:w-[calc(50%-1rem)]">
                 <a
                   href={resolve("/[slug]", { slug: post.slug })}
-                  class="group border-accent bg-background relative z-0 flex h-full w-full flex-col overflow-hidden rounded-xl border-2 visited:no-underline hover:[text-decoration:none] hover:group-hover:[text-decoration:none]">
+                  class="group relative z-0 flex h-full w-full flex-col overflow-hidden rounded-xl border-2 border-accent bg-background visited:no-underline hover:[text-decoration:none] hover:group-hover:[text-decoration:none]">
                   <div
-                    class="border-accent relative h-64 min-h-auto w-full shrink basis-auto overflow-hidden border-b">
+                    class="relative h-64 min-h-auto w-full shrink basis-auto overflow-hidden border-b border-accent">
                     <img
                       src={post.metadata.heroImage}
                       alt="heroImage"
@@ -211,12 +211,12 @@
                       <div class="mb-3 flex flex-wrap gap-2">
                         {#if post.metadata.project}
                           <span
-                            class="bg-primary text-primary-foreground rounded-full px-3 py-1 text-xs font-semibold">
+                            class="rounded-full bg-primary px-3 py-1 text-xs font-semibold text-primary-foreground">
                             {post.metadata.project}
                           </span>
                         {/if}
                         <span
-                          class="bg-secondary text-secondary-foreground rounded-full px-3 py-1 text-xs font-semibold">
+                          class="rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-secondary-foreground">
                           {post.metadata.type}
                         </span>
                       </div>

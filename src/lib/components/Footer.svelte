@@ -6,24 +6,24 @@
   const url = $derived(page.url.pathname);
 </script>
 
-<footer class="text-accent p-4 text-center">
-  <div class="divide-accent mb-2 flex justify-center divide-x">
+<footer class="p-4 text-center text-accent">
+  <div class="mb-2 flex justify-center divide-x divide-accent">
     <a
       href="https://tonantzintla.org"
       target="_blank"
       rel="noopener"
-      class="hover:text-muted-foreground px-4 underline-offset-2 transition-colors duration-300"
+      class="px-4 underline-offset-2 transition-colors duration-300 hover:text-muted-foreground"
       >Tonantzintla</a>
     <a
       href={resolve("/[slug]", { slug: "privacy-policy" })}
       class={cn(
-        "hover:text-muted-foreground px-4 underline-offset-2 transition-colors duration-300",
+        "px-4 underline-offset-2 transition-colors duration-300 hover:text-muted-foreground",
         { underline: url === "/privacy-policy" }
       )}>Privacy Policy</a>
     <a
       href={resolve("/[slug]", { slug: "terms-of-service" })}
       class={cn(
-        "hover:text-muted-foreground px-4 underline-offset-2 transition-colors duration-300",
+        "px-4 underline-offset-2 transition-colors duration-300 hover:text-muted-foreground",
         { underline: url === "/terms-of-service" }
       )}>Terms of Service</a>
   </div>

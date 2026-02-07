@@ -45,7 +45,7 @@
 
 <main class="relative overflow-hidden py-8">
   <article
-    class="prose prose-lg prose-neutral prose-invert! prose-headings:scroll-m-20 prose-a:text-white prose-img:pointer-events-none prose-img:w-full prose-img:rounded-lg prose-video:w-full prose-video:rounded-lg relative mx-auto mt-6 max-w-4xl px-4 py-4 sm:px-4 lg:px-6">
+    class="relative mx-auto prose prose-lg mt-6 max-w-4xl px-4 py-4 prose-neutral prose-invert! sm:px-4 lg:px-6 prose-headings:scroll-m-20 prose-a:text-white prose-img:pointer-events-none prose-img:w-full prose-img:rounded-lg prose-video:w-full prose-video:rounded-lg">
     <div class="mx-auto mt-0 mb-5 max-w-2xl">
       <div class="mx-auto">
         <div class="relative z-50 text-xs font-bold text-neutral-300">
@@ -67,7 +67,7 @@
         </div>
       </div>
     {/if}
-    <div class="prose-lg mx-auto leading-[1.688rem]">
+    <div class="mx-auto prose-lg leading-[1.688rem]">
       {@render children?.()}
       <small class="text-accent">
         <span>This document is effective as of <FormattedDate date={pubDateFormat} /></span>
