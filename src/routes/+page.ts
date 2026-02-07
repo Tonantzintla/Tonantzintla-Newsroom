@@ -13,7 +13,7 @@ export const load = (async () => {
       return {
         slug: path
           .replace("/src/content/posts/", "")
-          .replace(/^(minionah|tonantzintla)\//, "")
+          .replace(/^(minionah|tonantzintla|mc-id|unauctionable)\//, "")
           .replace(".md", "")
           .replace("/index", ""),
         metadata,

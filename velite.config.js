@@ -26,7 +26,9 @@ const postSchema = baseSchema.transform((data) => {
     .replace(/^posts\//, "")
     .replace(/^misc\//, "")
     .replace(/^minionah\//, "")
-    .replace(/^tonantzintla\//, "");
+    .replace(/^tonantzintla\//, "")
+    .replace(/^mc-id\//, "");
+
   return {
     ...data,
     slug: cleanSlug,
@@ -50,7 +52,8 @@ export default defineConfig({
         .replace(/^posts\//, "")
         .replace(/^misc\//, "")
         .replace(/^minionah\//, "")
-        .replace(/^tonantzintla\//, "");
+        .replace(/^tonantzintla\//, "")
+        .replace(/^mc-id\//, "");
     });
   },
 });

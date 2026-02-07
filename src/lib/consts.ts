@@ -7,7 +7,7 @@ export const SITE_DESCRIPTION =
 export const SITE_URL = "https://newsroom.tonantzintla.org";
 
 // Project identifiers for filtering
-export const PROJECTS = ["MinionAH", "Tonantzintla", "Unauctionable"] as const;
+export const PROJECTS = ["MinionAH", "Tonantzintla", "MC-ID", "Unauctionable"] as const;
 export type Project = (typeof PROJECTS)[number];
 
 // Post type categories
